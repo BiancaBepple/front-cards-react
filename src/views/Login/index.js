@@ -68,6 +68,8 @@ class Login extends Component {
       name: this.state.newName,
       email: this.state.newEmail,
       password: this.state.newPassword,
+    }).catch(function(error) {
+      alert('Cadastro de usuário inválido!');
     });
 
     const response2 = await api.post('/login', {
